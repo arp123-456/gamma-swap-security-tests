@@ -1,0 +1,42 @@
+{
+  "name": "gamma-swap-security-tests",
+  "version": "1.0.0",
+  "description": "Flash loan oracle manipulation security testing for Gamma token and Gamma swap",
+  "scripts": {
+    "test": "hardhat test",
+    "test:flashloan": "hardhat test test/FlashLoanAttack.test.js",
+    "test:reentrancy": "hardhat test test/ReentrancyAttack.test.js",
+    "test:twap": "hardhat test test/TWAPManipulation.test.js",
+    "test:audit": "node scripts/comprehensive-audit.js",
+    "compile": "hardhat compile",
+    "tenderly:setup": "node scripts/tenderly-setup.js",
+    "tenderly:fork": "node scripts/tenderly-fork.js",
+    "tenderly:simulate": "node scripts/tenderly-simulate.js",
+    "tenderly:analyze": "node scripts/tenderly-analyze.js",
+    "remix:export": "node scripts/export-for-remix.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "@chainlink/contracts": "^0.8.0",
+    "dotenv": "^16.0.3",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "hardhat": "^2.19.0",
+    "chai": "^4.3.10",
+    "ethers": "^6.9.0",
+    "solidity-coverage": "^0.8.5"
+  },
+  "keywords": [
+    "security",
+    "flash-loan",
+    "oracle-manipulation",
+    "defi",
+    "ethereum",
+    "solidity",
+    "tenderly",
+    "remix"
+  ]
+}
